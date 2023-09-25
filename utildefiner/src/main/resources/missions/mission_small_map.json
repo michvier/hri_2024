@@ -1,0 +1,23 @@
+{
+  "goal-id": "L3",
+  "preference-info": [
+    {
+      "scaling-const": 0.1,
+      "min-step-value": 0,
+      "max-step-value": 100,
+      "objective": "travelTime"
+    },
+    {
+      "scaling-const": 0.4,
+      "min-step-value": 0,
+      "max-step-value": 1,
+      "objective": "collision"
+    },
+    {
+      "scaling-const": 0.5,
+      "min-step-value": 0,
+      "max-step-value": 1,
+      "objective": "intrusiveness"
+    }
+  ]
+}

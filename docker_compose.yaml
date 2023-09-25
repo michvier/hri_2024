@@ -1,0 +1,38 @@
+version: '3'
+services:
+  qo_demo_database:
+    platform: linux/x86_64
+    image: anonconfsubmission/qodatabase
+    container_name: qo_demo_database
+    volumes:
+      - db-data:/data/db
+      - mongo-config:/data/configdb
+    hostname: aqoap_mongo
+    ports:
+      - "0.0.0.0:27777:27017" # Bind to all available IP addresses
+    networks:
+      - qo_demo_network
+
+  qo_demo_dashboard:
+    platform: linux/x86_64
+    image: anonconfsubmission/qodashboard
+    container_name: qo_demo_dashboard
+    hostname: aqoap_dashboard
+    ports:
+      - "0.0.0.0:8888:8080" # Bind to all available IP addresses
+    networks:
+      - qo_demo_network
+
+volumes:
+  db-data:
+  mongo-config:
+
+networks:
+  qo_demo_network:
+      driver: bridge
+      ipam:
+          driver: default
+          config:
+              - subnet: "10.122.0.0/24"
+                gateway: "10.122.0.1"
+

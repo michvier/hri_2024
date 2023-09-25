@@ -1,0 +1,91 @@
+{
+	"obstacles": [
+    {
+      "occlusion": "PARTIALLY_OCCLUDED",
+      "to-id": "L4",
+      "from-id": "L3"
+    },
+    {
+      "occlusion": "OCCLUDED",
+      "to-id": "L4",
+      "from-id": "L2"
+    },
+    {
+      "occlusion": "OCCLUDED",
+      "to-id": "L6",
+      "from-id": "L4"
+    }
+  ],
+  "mur": 10,
+  "map": [
+    {
+      "area": "PUBLIC",
+      "node-id": "L1",
+      "coords": {
+        "x": 1.0,
+        "y": 1.0
+      },
+      "connected-to": [
+        "L2",
+        "L3"
+      ]
+    },
+    {
+      "area": "PUBLIC",
+      "node-id": "L2",
+      "coords": {
+        "x": 2.0,
+        "y": 1.0
+      },
+      "connected-to": [
+        "L4"
+      ]
+    },
+    {
+      "area": "PRIVATE",
+      "node-id": "L3",
+      "coords": {
+        "x": 1.0,
+        "y": 2.0
+      },
+      "connected-to": [
+        "L1",
+        "L4"
+      ]
+    },
+    {
+      "area": "PUBLIC",
+      "node-id": "L4",
+      "coords": {
+        "x": 2.0,
+        "y": 2.0
+      },
+      "connected-to": [
+        "L5",
+        "L6"
+      ]
+    },
+    {
+      "area": "SEMI_PRIVATE",
+      "node-id": "L5",
+      "coords": {
+        "x": 3.0,
+        "y": 2.0
+      },
+      "connected-to": [
+        "L6"
+      ]
+    },
+    {
+      "area": "PUBLIC",
+      "node-id": "L6",
+      "coords": {
+        "x": 2.0,
+        "y": 3.0
+      },
+      "connected-to": [
+        "L3"
+      ]
+    }
+  ]
+}

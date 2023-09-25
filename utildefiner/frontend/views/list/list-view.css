@@ -1,0 +1,53 @@
+.list-view {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+}
+
+.list-view .grid-wrapper {
+  flex-grow: 1;
+  width: 100%;
+}
+
+.list-view .full-size {
+  width: 100%;
+  height: 100%;
+}
+
+.list-view #editor-layout {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+.list-view #editor {
+  padding: var(--lumo-space-l);
+  flex-grow: 1;
+}
+
+.list-view #preference-layout {
+  width: 430px;
+  display: flex;
+  flex-direction: column;
+}
+
+.list-view #preference {
+  padding: var(--lumo-space-l);
+  flex-grow: 1;
+}
+
+.list-view #button-layout {
+  width: 100%;
+  flex-wrap: wrap;
+  background-color: var(--lumo-contrast-30pct);
+  padding: var(--lumo-space-s) var(--lumo-space-l);
+}
+
+.message-list {
+    overflow-y: scroll;
+    width: 100%;
+}
+
+.message-list p {
+    width: 100%;
+}
