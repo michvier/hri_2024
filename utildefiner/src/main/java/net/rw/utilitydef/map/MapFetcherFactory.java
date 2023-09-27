@@ -2,7 +2,7 @@ package net.rw.utilitydef.map;
 
 public class MapFetcherFactory {
 
-	private static final String DEFAULT_HOST = "localhost"; //"aqoap_mongo";
+	private static final String DEFAULT_HOST = "aqoap_mongo"; //"localhost";
 	private static final int DEFAULT_PORT = 27017;
 	private static final String DEFAULT_DB = "AQOAP";
 	private static final String DEFAULT_COLL = "AQOAP_MAPS";
