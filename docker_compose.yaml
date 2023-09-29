@@ -1,9 +1,9 @@
 version: '3'
 services:
-  qo_demo_database:
+  aqoap_mongo_db:
     platform: linux/x86_64
-    image: anonconfsubmission/qodatabase
-    container_name: qo_demo_database
+    image: mongo:4.4.6
+    container_name: aqoap_mongo
     volumes:
       - db-data:/data/db
       - mongo-config:/data/configdb
@@ -11,28 +11,28 @@ services:
     ports:
       - "0.0.0.0:27777:27017" # Bind to all available IP addresses
     networks:
-      - qo_demo_network
+      - aqoap_network
 
-  qo_demo_dashboard:
+  aqoap_dashboard:
     platform: linux/x86_64
-    image: anonconfsubmission/qodashboard
-    container_name: qo_demo_dashboard
+    image: aqoap-dashboard:latest
+    container_name: aqoap_dashboard
     hostname: aqoap_dashboard
     ports:
       - "0.0.0.0:8888:8080" # Bind to all available IP addresses
     networks:
-      - qo_demo_network
+      - aqoap_network
 
 volumes:
   db-data:
   mongo-config:
 
 networks:
-  qo_demo_network:
+  aqoap_network:
       driver: bridge
       ipam:
           driver: default
           config:
-              - subnet: "10.122.0.0/24"
-                gateway: "10.122.0.1"
+              - subnet: "10.22.0.0/24"
+                gateway: "10.22.0.1"
 
