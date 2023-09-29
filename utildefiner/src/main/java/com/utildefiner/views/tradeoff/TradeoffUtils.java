@@ -290,15 +290,15 @@ public class TradeoffUtils {
 
     public double[] calculateUtility(MapEntry node, double[] costs, double weight_t, double weight_c, double weight_i){
 		double[] utility = {0, 0, 0};
-		System.out.println("These are the costs: " + Arrays.toString(costs));
+		// System.out.println("These are the costs: " + Arrays.toString(costs));
 		// System.out.println("Best cost Tt: " + node.getCost_t());
 		// System.out.println("Best cost Col: " + Math.max(node.getCost_c(), 1));
 		// System.out.println("Best cost Int: " + Math.max(node.getCost_i(), 1));
 
-		System.out.println("Utility Cost: " + node.getUtilityCost());
-		System.out.println(weight_t +  "*"  + node.getCost_t() + "/" + costs[0] + " = " + weight_t * node.getCost_t()/costs[0]);
-		System.out.println(weight_c +  "*"  + Math.max(node.getCost_c(), 1)+ "/" + Math.max(costs[1], 1) + " = " + weight_c * Math.max(node.getCost_c(), 1)/Math.max(costs[1], 1));
-		System.out.println(weight_i +  "*"  + Math.max(node.getCost_i(), 1) + "/" + Math.max(costs[2], 1) + " = " + weight_i * Math.max(node.getCost_i(), 1)/Math.max(costs[2], 1));
+		// System.out.println("Utility Cost: " + node.getUtilityCost());
+		// System.out.println(weight_t +  "*"  + node.getCost_t() + "/" + costs[0] + " = " + weight_t * node.getCost_t()/costs[0]);
+		// System.out.println(weight_c +  "*"  + Math.max(node.getCost_c(), 1)+ "/" + Math.max(costs[1], 1) + " = " + weight_c * Math.max(node.getCost_c(), 1)/Math.max(costs[1], 1));
+		// System.out.println(weight_i +  "*"  + Math.max(node.getCost_i(), 1) + "/" + Math.max(costs[2], 1) + " = " + weight_i * Math.max(node.getCost_i(), 1)/Math.max(costs[2], 1));
 		utility[0] = weight_t * node.getCost_t()/costs[0];
 		utility[1] = weight_c * Math.max(node.getCost_c(), 1)/Math.max(costs[1], 1);
 		utility[2] = weight_i * Math.max(node.getCost_i(), 1)/Math.max(costs[2], 1);
